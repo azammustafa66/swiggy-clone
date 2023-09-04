@@ -6,7 +6,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import logo from "../assets/logo.jpg";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/userContext";
+import UserContext from "../utils/UserContext";
 
 export const Header = () => {
   const { loggedInUser } = useContext(UserContext);
