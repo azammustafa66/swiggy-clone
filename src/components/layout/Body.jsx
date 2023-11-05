@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import RestaurantCard, { isPromoted } from "./RestaurantCard";
-import useOnlineStatus from "../utils/useOnlineStatus";
-import CardShimmer from "./Shimmer/CardShimmer";
+import RestaurantCard, { isPromoted } from "../feed/RestaurantCard";
+import useOnlineStatus from "../../utils/useOnlineStatus";
+import CardShimmer from "../Shimmer/CardShimmer";
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([]);

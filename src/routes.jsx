@@ -4,9 +4,9 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import ContactUs from "./components/Routes/ContactUs";
 import Error from "./components/Routes/Error";
-import Body from "./components/Body";
+import Body from "./components/layout/Body";
 import Cart from "./components/Cart";
-import RestaurantMenu from "./components/RestaurantMenu";
+import RestaurantMenu from "./components/menu/RestaurantMenu";
 import About from "./components/Routes/About";
 import MenuShimmer from "./components/Shimmer/MenuShimmer";
 

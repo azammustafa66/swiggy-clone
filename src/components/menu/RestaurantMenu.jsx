@@ -2,9 +2,9 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import useRestaurantMenu from "../utils/useRestaurantMenu";
+import useRestaurantMenu from "../../utils/useRestaurantMenu";
 import MenuCategory from "./MenuCategory";
-import MenuShimmer from "./Shimmer/MenuShimmer";
+import MenuShimmer from "../Shimmer/MenuShimmer";
 
 const RestaurantMenu = () => {
   const { resId } = useParams();

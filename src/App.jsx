@@ -2,8 +2,8 @@ import { Outlet } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import UserContext from "./utils/UserContext";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 /**
  *

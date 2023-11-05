@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import { IMG_URL } from "../utils/url";
+import { IMG_URL } from "../../utils/url";
 import { Card } from "react-bootstrap";
 
 const RestaurantCard = ({

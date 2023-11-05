@@ -2,8 +2,8 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 
-import { IMG_URL } from "../utils/url";
-import { addItem } from "../utils/cartSlice";
+import { IMG_URL } from "../../utils/url";
+import { addItem } from "../../utils/cartSlice";
 
 const ItemList = ({ items }) => {
   // console.log(items);

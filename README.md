@@ -2,6 +2,10 @@
 
 Welcome to Foodie Delight, the all-in-one food delivery application that brings your favorite meals right to your doorstep! Built with the modern ReactJS library, managed state with Redux, and styled with Tailwind CSS, this app offers a smooth, responsive user experience. Testing is rigorously carried out with Jest to ensure a bug-free ordering process.
 
+## Screenshot
+
+[!Screenshot](./Screenshot.png)
+
 ## Features
 
 1. **Browse Restaurants**: Explore a variety of restaurants with our easy-to-navigate list.
@@ -27,7 +31,7 @@ Ensure you have the following installed:
 1. Clone the repo
 
    ```sh
-   git clone https://github.com/your-username/foodie-delight.git
+   git clone https://github.com/azammustafa66/swiggy-clone.git
    ```
 
 2. Install Dependencies

@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
-import logo from "../assets/logo.jpg";
-import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/UserContext";
+import logo from "../../assets/logo.jpg";
+import useOnlineStatus from "../../utils/useOnlineStatus";
+import UserContext from "../../utils/UserContext";
 
 export const Header = () => {
   const { loggedInUser } = useContext(UserContext);
@@ -26,7 +26,6 @@ export const Header = () => {
   };
 
   const cartItems = useSelector((store) => store.cart.items);
-  // console.log(cartItems);
 
   return (
     <nav className="flex items-center justify-between border-black">
