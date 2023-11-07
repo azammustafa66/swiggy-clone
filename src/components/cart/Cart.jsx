@@ -9,8 +9,8 @@ import {
   removeItem,
   decreaseQuantity,
   increaseQuantity,
-} from "../utils/cartSlice";
-import { IMG_URL, NON_VEG_IMG_URL, VEG_IMG_URL } from "../utils/url";
+} from "../../utils/cartSlice";
+import { IMG_URL, NON_VEG_IMG_URL, VEG_IMG_URL } from "../../utils/url";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);

@@ -1,10 +1,10 @@
-# Foodie Delight - Your Go-To Food Delivery App
+# Food delivery App Clone
 
 Welcome to Foodie Delight, the all-in-one food delivery application that brings your favorite meals right to your doorstep! Built with the modern ReactJS library, managed state with Redux, and styled with Tailwind CSS, this app offers a smooth, responsive user experience. Testing is rigorously carried out with Jest to ensure a bug-free ordering process.
 
 ## Screenshot
 
-[!Screenshot](./Screenshot.png)
+![Screenshot](./src/assets/Screenshot.png)
 
 ## Features
 

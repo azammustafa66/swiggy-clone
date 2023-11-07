@@ -5,7 +5,7 @@ import App from "./App";
 import ContactUs from "./components/Routes/ContactUs";
 import Error from "./components/Routes/Error";
 import Body from "./components/layout/Body";
-import Cart from "./components/Cart";
+import Cart from "./components/cart/Cart";
 import RestaurantMenu from "./components/menu/RestaurantMenu";
 import About from "./components/Routes/About";
 import MenuShimmer from "./components/Shimmer/MenuShimmer";
