@@ -50,7 +50,9 @@ export const Header = () => {
             <Link to={"/cart"}>
               <div className="relative text-right">
                 <AiOutlineShoppingCart size={25} />
-                <StyledP>{cartItems.length}</StyledP>
+                <StyledP data-testid="cart-items-count">
+                  {cartItems.length}
+                </StyledP>
               </div>
             </Link>
           </ListItem>

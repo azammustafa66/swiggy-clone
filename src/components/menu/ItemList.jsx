@@ -6,7 +6,7 @@ import { IMG_URL } from "../../utils/url";
 import { addItem } from "../../utils/cartSlice";
 
 const ItemList = ({ items }) => {
-  // console.log(items);
+  console.log(items);
   const dispatch = useDispatch();
   function handleAddToCart(item) {
     // When somebody clicks we need to dispatch the action

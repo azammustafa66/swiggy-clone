@@ -32,9 +32,9 @@ const Body = () => {
     setFilteredRestaurants(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    // console.log(
-    //   json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    // );
+    console.log(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   const onlineStatus = useOnlineStatus();
@@ -115,7 +115,7 @@ const Body = () => {
           {filteredRestaurant?.map((restaurant) => (
             <StyledLink
               key={restaurant.info.id}
-              to={"/restaurant/" + restaurant.info.id}
+              to={`/restaurant/${restaurant.info.id}`}
             >
               {restaurant.info.promoted ? (
                 <RestaurantCardPromoted {...restaurant.info} />

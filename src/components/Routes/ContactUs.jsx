@@ -12,7 +12,7 @@ const ContactUs = () => {
           rows={10}
           cols={50}
           placeholder="Message"
-          className="border border-black outline-none"
+          className="border border-black outline-none p-2"
         ></textarea>
       </form>
       <button
