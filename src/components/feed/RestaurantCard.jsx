@@ -21,7 +21,7 @@ const RestaurantCard = ({
   const truncatedName = truncateString(name, 20);
 
   return (
-    <StyledDiv>
+    <StyledDiv data-testid='resCard'>
       <Card className="p-2">
         <Card.Img
           variant="top"
@@ -31,7 +31,7 @@ const RestaurantCard = ({
         <Card.Body>
           <Card.Title>{truncatedName}</Card.Title>
           <Card.Text>{truncatedCuisines}</Card.Text>
-          <Card.Text>Rating: {avgRating}</Card.Text>
+          <Card.Text data-testid='rating'>Rating: {avgRating}</Card.Text>
           <Card.Text>{costForTwo}</Card.Text>
         </Card.Body>
       </Card>
@@ -50,13 +50,25 @@ RestaurantCard.propTypes = {
 export default RestaurantCard;
 
 export const isPromoted = (RestaurantCard) => {
-  (props) => (
-    <div>
-      <label>Promoted</label>
-      <RestaurantCard {...props} />
-    </div>
-  );
+  function WithPromotion(props) {
+    return (
+      <div>
+        <label>Promoted</label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  }
+
+  WithPromotion.displayName = `WithPromotion(${getDisplayName(
+    RestaurantCard,
+  )})`;
+
+  return WithPromotion;
 };
+
+function getDisplayName(RestaurantCard) {
+  return RestaurantCard.displayName || RestaurantCard.name || "Component";
+}
 
 const StyledDiv = styled.div`
   width: 18rem;

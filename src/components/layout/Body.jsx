@@ -19,7 +19,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9970483&lng=77.61440759999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9970483&lng=77.61440759999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
     );
 
     const json = await data.json();
@@ -27,14 +27,16 @@ const Body = () => {
     // console.log(json.data.cards[2].card);
 
     setRestaurantList(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants,
     );
     setFilteredRestaurants(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants,
     );
-    console.log(
+    /* console.log(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    ); */
   };
 
   const onlineStatus = useOnlineStatus();
@@ -45,7 +47,7 @@ const Body = () => {
 
   const topRatedRestaurants = () => {
     const filteredList = filteredRestaurant.filter(
-      (restaurant) => restaurant.info.avgRating >= 4.2
+      (restaurant) => restaurant.info.avgRating >= 4.2,
     );
 
     setFilteredRestaurants(filteredList);
@@ -61,8 +63,8 @@ const Body = () => {
       (restaurant) =>
         restaurant.info.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         restaurant.info.cuisines.some((cuisine) =>
-          cuisine.toLowerCase().includes(searchTerm.toLowerCase())
-        )
+          cuisine.toLowerCase().includes(searchTerm.toLowerCase()),
+        ),
     );
 
     setFilteredRestaurants(filteredResults);
@@ -72,7 +74,7 @@ const Body = () => {
     const sortedData = [...filteredRestaurant].sort(
       (a, b) =>
         parseInt(a.info.costForTwo.match(/\d+/)[0]) -
-        parseInt(b.info.costForTwo.match(/\d+/)[0])
+        parseInt(b.info.costForTwo.match(/\d+/)[0]),
     );
 
     setFilteredRestaurants(sortedData);
@@ -82,7 +84,7 @@ const Body = () => {
     const sortedData = [...filteredRestaurant].sort(
       (a, b) =>
         parseInt(b.info.costForTwo.match(/\d+/)[0]) -
-        parseInt(a.info.costForTwo.match(/\d+/)[0])
+        parseInt(a.info.costForTwo.match(/\d+/)[0]),
     );
 
     setFilteredRestaurants(sortedData);

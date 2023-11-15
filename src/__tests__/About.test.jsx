@@ -8,17 +8,17 @@ describe("About Us", () => {
     render(<About />);
 
     expect(screen.getByRole("navigation")).toHaveTextContent(
-      "Our Food Delivery App"
+      "Our Food Delivery App",
     );
 
     expect(
-      screen.getByRole("heading", { name: /about us/i })
+      screen.getByRole("heading", { name: /about us/i }),
     ).toBeInTheDocument();
 
     expect(
       screen.getByText(
-        /our mission is to bring your favorite meals to your doorstep/i
-      )
+        /our mission is to bring your favorite meals to your doorstep/i,
+      ),
     ).toBeInTheDocument();
 
     expect(screen.getByRole("contentinfo")).toBeInTheDocument();

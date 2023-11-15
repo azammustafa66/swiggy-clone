@@ -15,7 +15,7 @@ const cartSlice = createSlice({
     addItem: (state, action) => {
       const newItem = action.payload;
       const existingItemIndex = state.items.findIndex(
-        (item) => item.card.info.id === newItem.card.info.id
+        (item) => item.card.info.id === newItem.card.info.id,
       );
 
       if (existingItemIndex !== -1) {
@@ -30,7 +30,7 @@ const cartSlice = createSlice({
     removeItem: (state, action) => {
       const itemIdToRemove = action.payload;
       const updatedItems = state.items.filter(
-        (item) => item.card.info.id !== itemIdToRemove
+        (item) => item.card.info.id !== itemIdToRemove,
       );
       state.items = updatedItems;
       saveCartToLocalStorage(updatedItems); // Save the updated items array to localStorage
@@ -38,7 +38,7 @@ const cartSlice = createSlice({
     increaseQuantity: (state, action) => {
       const itemIdToIncrease = action.payload;
       const itemToIncrease = state.items.find(
-        (item) => item.card.info.id === itemIdToIncrease
+        (item) => item.card.info.id === itemIdToIncrease,
       );
 
       if (itemToIncrease) {
@@ -48,14 +48,14 @@ const cartSlice = createSlice({
     decreaseQuantity: (state, action) => {
       const itemIdToDecrease = action.payload;
       const itemToDecrease = state.items.find(
-        (item) => item.card.info.id === itemIdToDecrease
+        (item) => item.card.info.id === itemIdToDecrease,
       );
 
       if (itemToDecrease && itemToDecrease.quantity > 1) {
         itemToDecrease.quantity -= 1;
       } else {
         const updatedItems = state.items.filter(
-          (item) => item.card.info.id !== itemIdToDecrease
+          (item) => item.card.info.id !== itemIdToDecrease,
         );
         state.items = updatedItems;
       }

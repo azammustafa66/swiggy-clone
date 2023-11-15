@@ -20,7 +20,7 @@ const renderHeaderWithStore = () => {
       <Router>
         <Header />
       </Router>
-    </Provider>
+    </Provider>,
   );
 };
 

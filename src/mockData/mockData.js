@@ -1,10 +1,16 @@
 export const mockRestaurantData = {
   id: "285175",
+
   name: "Thalairaj Biryani",
+
   cloudinaryImageId: "g5sfrpdo2x8pjhpk36xm",
+
   locality: "2nd stage",
+
   areaName: "Indiranagar",
+
   costForTwo: "₹300 for two",
+
   cuisines: [
     "Andhra",
     "Biryani",
@@ -14,7 +20,10 @@ export const mockRestaurantData = {
     "Combo",
     "Beverages",
   ],
+
   avgRating: 4.2,
+
+  promoted: true,
 };
 
 export const mockItemData = {
@@ -34,5 +43,4 @@ export const mockItemData = {
   price: 23143,
 
   itemAttribute: { vegClassifier: "VEG" },
-
 };
