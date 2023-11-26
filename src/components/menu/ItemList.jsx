@@ -6,7 +6,7 @@ import { IMG_URL } from "../../utils/url";
 import { addItem } from "../../utils/cartSlice";
 
 const ItemList = ({ items }) => {
-  console.log(items);
+  // console.log(items);
   const dispatch = useDispatch();
   function handleAddToCart(item) {
     // When somebody clicks we need to dispatch the action
@@ -19,6 +19,7 @@ const ItemList = ({ items }) => {
         <div
           key={item?.card?.info?.id}
           className="p-2 m-2 w-full flex flex-col items-stretch"
+          data-testid="item"
         >
           <div className="flex items-start justify-between">
             <p>
@@ -32,12 +33,12 @@ const ItemList = ({ items }) => {
             <div>
               <img
                 src={IMG_URL + item?.card?.info?.imageId}
-                alt="food-image"
+                alt="item-image"
                 width={118}
                 height={96}
                 className="relative rounded-lg"
               />
-              <Button onClick={() => handleAddToCart(item)}>Add to Cart</Button>
+              <Button onClick={() => handleAddToCart(item)} data-testid='addBtn'>Add to Cart</Button>
             </div>
           </div>
           <p className="text-left text-sm mb-10 text-gray-600 w-[70%]">

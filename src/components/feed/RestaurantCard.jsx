@@ -21,7 +21,7 @@ const RestaurantCard = ({
   const truncatedName = truncateString(name, 20);
 
   return (
-    <StyledDiv data-testid='resCard'>
+    <StyledDiv data-testid="resCard">
       <Card className="p-2">
         <Card.Img
           variant="top"
@@ -31,7 +31,7 @@ const RestaurantCard = ({
         <Card.Body>
           <Card.Title>{truncatedName}</Card.Title>
           <Card.Text>{truncatedCuisines}</Card.Text>
-          <Card.Text data-testid='rating'>Rating: {avgRating}</Card.Text>
+          <Card.Text data-testid="rating">Rating: {avgRating}</Card.Text>
           <Card.Text>{costForTwo}</Card.Text>
         </Card.Body>
       </Card>

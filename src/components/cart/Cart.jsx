@@ -16,7 +16,7 @@ const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
   const dispatch = useDispatch();
 
-  console.log(cartItems);
+  // console.log(cartItems);
 
   const handleClearCart = () => {
     dispatch(clearCart());
@@ -60,7 +60,10 @@ const Cart = () => {
       <div>
         <StyledButton onClick={handleClearCart}>Clear Cart</StyledButton>
       </div>
-      <div className="w-1/2 mx-auto text-center gap-4 flex flex-col justify-evenly">
+      <div
+        className="w-1/2 mx-auto text-center gap-4 flex flex-col justify-evenly"
+        data-testid="cart-item"
+      >
         {cartItems.length === 0 ? (
           <h1 className="text-xl font-medium">
             Your cart feels light, please add something
