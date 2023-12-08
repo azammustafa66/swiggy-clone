@@ -143,7 +143,7 @@ const Button = styled.button`
   }
 `;
 
-export const StyledLink = styled(Link)`
+const StyledLink = styled(Link)`
   display: block;
   text-decoration: none;
   border-radius: 5px;
